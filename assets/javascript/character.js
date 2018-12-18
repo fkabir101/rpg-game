@@ -2,19 +2,19 @@
 var ryu = {
   name : "Ryu",
   health : 150,
-  Move1 : [15, 5, 10],
+  moves : [15, 5, 10],
   block : 2
 };
 var ken = {
   name : "Ken",
   health : 125,
-  Move1 : [10, 5, 15],
+  moves : [10, 5, 15],
   block : 3
 };
 var chun = {
   name : "Chun Li",
   health : 100,
-  Move1 : [5, 15, 5],
+  moves : [5, 15, 5],
   block : 4
 };
 
