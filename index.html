@@ -10,21 +10,55 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Title</title>
 </head>
-<div id = "menu" class = "container">
-  <button id = "ryu" type="button" class="btn btn-secondary">Ryu</button>
-  <button id = "chun" type="button" class="btn btn-primary">Chun-Li</button>
-  <button id = "ken" type="button" class="btn btn-danger">Ken</button>
-  <button id = "start" type="button" class="btn btn-success">Fight!</button>
-</div>
-
-<div id = "game" class = "container">
-  <button id = "fire" type="button" class="btn btn-secondary">Fireball</button>
-  <button id = "kick" type="button" class="btn btn-primary">Tatsu</button>
-  <button id = "punch" type="button" class="btn btn-danger">Shoryu</button>
-  <button id = "play" type="button" class="btn btn-success">Play!</button>
-</div>
-
 <body>
+  <div id = "menu-container">
+    <div id = "menu" class = "container text-center">
+      <div class = "row">
+        <div class = "col-4">
+            <div class="card" style="width: 18rem;">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">Andy</h5>
+                  <p class="card-text">Health: 100<br>Tank: 15<br>Artillery: 10<br>Infantry: 10</p>
+                  <button id = "andy" type="button" class="btn btn-secondary">Select</button>
+                </div>
+              </div>
+        </div>
+        <div class = "col-4">
+            <div class="card" style="width: 18rem;">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">Max</h5>
+                  <p class="card-text">Health: 150<br>Tank: 5<br>Artillery: 15<br>Infantry: 10</p>
+                  <button id = "max" type="button" class="btn btn-primary">Select</button>
+                </div>
+              </div>
+        </div>
+        <div class = "col-4">
+            <div class="card" style="width: 18rem;">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">Sam</h5>
+                  <p class="card-text">Health: 125<br>Tank: 5<br>Artillery: 10<br>Infantry: 15</p>
+                  <button id = "sam" type="button" class="btn btn-danger">Select</button>
+                </div>
+              </div>
+        </div>
+      </div> 
+      <button id = "start" type="button" class="btn btn-success">Fight!</button>
+    </div>
+  </div>
+
+  <div id = "game-container">
+    <div id = "game" class = "container">
+      <div id="player-health"></div>
+      <div id="computer-health"></div>
+      <button type="button" value = 1 class="btn btn-secondary attack">Infantry</button>
+      <button type="button" value = 2 class="btn btn-primary attack">Artillary</button>
+      <button type="button" value = 3 class="btn btn-danger attack">Tank</button>
+      <button id = "play" type="button" class="btn btn-success">Play!</button>
+    </div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>

@@ -1,12 +1,26 @@
-// Declare Variables
-var $menu = $("#menu").html();
+// Declare Variables to hold html elements
 var setAttack = 0;
+var gameActive = false;
 
-// Game start
+// Close game interface on load
+openMenu();
+
+// Function to removes menu and adds game interface
 function gameStart(){
-  console.log($menu);
-  $("#menu").remove();
+  $("#menu").hide();
+  $("#game").show();
+  $("#player-health").text(playerChar.health + " / " + playerChar.maxHealth);
+  $("#computer-health").text(cpuChar.health + " / " + cpuChar.maxHealth);
+  gameActive = true;
 }
+
+// Removes game interface and opens menu
+function openMenu(){
+  $("#game").hide();
+  if(gameActive === true)
+    $("#menu").show();
+}
+
 
 // Start game when button is pressed and 2 characters selected
 $("#start").on("click", function() {
@@ -18,24 +32,20 @@ $("#start").on("click", function() {
 });
 
 // Create a function to set players attack depending on players button press
-$("#fire").on("click", function() {
-  setAttack = 0;
-});
-$("#kick").on("click", function() {
-  setAttack = 1;
-});
-$("#punch").on("click", function() {
-  setAttack = 2;
+$(".attack").on("click", function() {
+  setAttack = parseInt(($(this).attr("value")));
+  alert(setAttack);
 });
 
 // When attack is selected play out who wins
-$("#play").on("click", function() {
+$("#play").on("click", function() { 
+  alert("working");
   var cpuAttack = Math.floor(Math.random()*cpuChar.moves.length);
   console.log("Cpuattack: "+ cpuAttack);
   if(setAttack === 0){
     attack1(cpuAttack);
   }
-  else if(setAttack ===1){
+  else if(setAttack === 1){
     attack2(cpuAttack);
   }
   else{

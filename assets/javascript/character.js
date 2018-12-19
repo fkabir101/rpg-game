@@ -1,20 +1,23 @@
 // create character objects
-var ryu = {
-  name : "Ryu",
-  health : 150,
-  moves : [15, 5, 10],
+var andy = {
+  name : "andy",
+  health : 100,
+  maxHealth: 100,
+  moves : [15, 10, 10],
   block : 2
 };
-var ken = {
-  name : "Ken",
-  health : 125,
-  moves : [10, 5, 15],
+var max = {
+  name : "max",
+  health : 150,
+  maxHealth: 150,
+  moves : [5, 15, 5],
   block : 3
 };
-var chun = {
-  name : "Chun Li",
-  health : 100,
-  moves : [5, 15, 5],
+var sam = {
+  name : "sam",
+  health : 125,
+  maxHealth: 125,
+  moves : [5, 10, 15],
   block : 4
 };
 
@@ -22,37 +25,37 @@ var playerChar = null;
 var cpuChar = null;
 
 // Sets player and cpu character when button is clicked
-$("#ryu").on("click", function() {
+$("#andy").on("click", function() {
   if(playerChar === null){
-    playerChar = ryu;
+    playerChar = andy;
     alert(`Player: ${playerChar.name}`);
   }
   else if(cpuChar === null){
-    cpuChar = ryu;
+    cpuChar = andy;
     alert(`Computer: ${cpuChar.name}`);
   }
   else
     alert("Both Characters set");
 });
-$("#ken").on("click", function() {
+$("#max").on("click", function() {
   if(playerChar === null){
-    playerChar = ken;
+    playerChar = max;
     alert(`Player: ${playerChar.name}`);
   }
   else if(cpuChar === null){
-    cpuChar = ken;
+    cpuChar = max;
     alert(`Computer: ${cpuChar.name}`);
   }
   else
     alert("Both Characters set");
 });
-$("#chun").on("click", function() {
+$("#sam").on("click", function() {
   if(playerChar === null){
-    playerChar = chun;
+    playerChar = sam;
     alert(`Player: ${playerChar.name}`);
   }
   else if(cpuChar === null){
-    cpuChar = chun;
+    cpuChar = sam;
     alert(`Computer: ${cpuChar.name}`);
   }
   else
